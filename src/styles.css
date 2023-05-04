@@ -1,0 +1,334 @@
+*{
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, sans-serif;
+  align-content: center;
+}
+
+main{
+  background: url("images/background.png") fixed center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* CONTAINERS ------------------------------------------------------------------------------------ */
+
+.container{
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr 3fr;
+  width: 85%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 320px;
+  min-height: 650px;
+  height: 100%;
+  min-height: 90vh;
+  padding: 20px;
+  border: 0.1rem solid rgba(136, 144, 255, 0.6);
+
+  background: linear-gradient(172.91deg, rgba(255, 255, 255, 0.8) 0.01%, rgba(102, 88, 255, 0.248) 0.02%, rgba(0, 84, 132, 0.32) 98.48%);
+  backdrop-filter: blur(6px);
+
+  border-radius: 30px 0px 0px 30px;
+}
+
+.projects{
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+  border: 0.1rem solid rgba(136, 144, 255, 0.6);
+  padding: 20px;
+  min-height: 650px;
+  border-left: none;
+
+  background: linear-gradient(116.19deg, rgba(32, 47, 125, 0.48) 0.56%, rgba(180, 188, 231, 0.12) 99.66%);
+  backdrop-filter: blur(7.5px);
+
+  border-radius: 0 30px 30px 0;
+}
+
+/* DESCRIPTION COMPONENTS ------------------------------------------------------------------------------------- */
+
+.perfil-photo{
+  width: 180px;
+  clip-path: circle(42% at 50% 40%);
+}
+
+.name{
+  font-size: 33px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.profession{
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+hr{
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  width: 70%; 
+}
+
+.about-me{
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.description-text{
+  font-size: 16px;
+  margin-bottom: 100px;
+  text-align: justify;
+  margin: 0 25px;
+}
+
+.buttons-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.buttons-description i{
+  font-size: 45px;
+}
+
+.buttonsSocialMedia{
+  display: flex;
+  gap: 30px;
+  margin: 25px auto;
+}
+
+.buttonsResponsive{
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact, .buttonContact{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 100rem;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.buttonProjects{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 100rem;
+  border: 1px solid rgba(136, 144, 255, 0.6);
+  color: #FFF;
+  background: linear-gradient(172.91deg, rgba(61, 127, 224, 0.726) 0%, rgba(148, 98, 241, 0.6) 0.01%, rgba(111, 97, 238, 0.559) 0.02%, rgba(175, 116, 243, 0.42) 0.03%, rgba(215, 124, 233, 0.18) 98.48%, rgba(236, 165, 227, 0.18) 98.48%);
+  box-shadow: 0px 6px 8px rgba(5, 37, 85, 0.5);
+}
+
+.contact:hover, .buttonContact:hover, .buttonProjects:hover{
+  cursor: pointer;
+}
+
+.buttonProjects i{
+  font-size: 25px;
+  color: #FFF;
+}
+
+.contact i, .buttonContact i{
+  font-size: 25px;
+  color: #000000;
+}
+
+.social-media{
+  color: #000000;
+}
+
+/* PROJECTS COMPONENTS ---------------------------------------------------------------------------------------------- */
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.navbar{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar li label{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  align-items: center;
+  width: auto;
+  padding: 15px;
+  height: 35px;
+  color: #000000;
+  background: none;
+  border: solid;
+  border-color:  rgba(136, 144, 255, 0.6);
+  border-radius: 100rem;
+  color: #FFF;
+  gap: 8px;
+}
+
+.navbar li label:hover{
+  cursor: pointer;
+  color: #000000;
+  background-color: #FFF;
+  border-color: #fff;
+}
+
+.navbar li label:hover i{
+  cursor: pointer;
+  color: #000000;
+  background-color: #FFF;
+}
+
+.navbar li input[type="checkbox"]:checked + label {
+  color: #000000;
+  background-color: #FFF;
+  border-color: #fff;
+}
+
+.navbar li input[type="checkbox"]:checked + label i{
+  color: #000000;
+  background-color: #FFF;
+}
+
+.navbar li input[type="checkbox"] {
+  opacity: 0;
+}
+
+.project-cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card{
+  background: linear-gradient(172.91deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 0.01%, rgba(255, 255, 255, 0.466146) 0.02%, rgba(255, 255, 255, 0.2) 0.03%, rgba(255, 255, 255, 0.05) 98.48%);
+  backdrop-filter: blur(6px);
+  box-shadow: 2px -2px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 25px;
+  width: 500px;
+  display: flex;
+  gap: 15px;
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+}
+
+.imageProject{
+  border-radius: 23%;
+  /* margin-right: 20px; */
+}
+
+.project-card h2{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.project-card h2 i {
+  right: 0;
+}
+
+.project-card p{
+  text-align: justify;
+}
+
+.projectHeader{
+  display: flex;
+  flex-direction: column;
+}
+
+.titleProject{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleProject i{
+  font-size: 25px;
+}
+
+.project-card:hover{
+  cursor: pointer;
+}
+
+
+/* RESPONSIVE ---------------------------------------------------------------------------------------------- */
+/* min 900px width responsive */
+
+@media (min-width: 901px) {
+  .buttonsResponsive{
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .container{
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .projects{
+    display: none;
+    width: 0;
+  }
+
+  .description{
+    border-radius: 30px;
+    align-items: center;
+    width: auto;
+    max-width: 400px;
+  }
+
+  .buttons-description{
+    gap: 40px;
+  }
+}
