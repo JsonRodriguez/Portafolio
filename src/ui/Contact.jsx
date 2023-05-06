@@ -1,4 +1,4 @@
-import { Header, Form } from "../components"
+import { Form } from "../components"
 
 export const Contact = () => {
     return (

@@ -1,4 +1,4 @@
-import { Header, NavBar, Cards } from "../components";
+import { NavBar, Cards } from "../components";
 
 export const Projects = () => {
   return (
