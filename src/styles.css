@@ -7,7 +7,7 @@
   align-content: center;
 }
 
-main{
+main {
   background: url("images/background.png") fixed center;
   background-size: cover;
   min-height: 100vh;
@@ -16,6 +16,10 @@ main{
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+}
+
+main div::-webkit-scrollbar{
+  display: none;
 }
 
 /* CONTAINERS ------------------------------------------------------------------------------------ */
@@ -29,7 +33,11 @@ main{
   backdrop-filter: blur(4px);
 }
 
-.description{
+.leftPanel, .leftPanelMain{
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow-y: auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,6 +53,16 @@ main{
   backdrop-filter: blur(6px);
 
   border-radius: 30px 0px 0px 30px;
+}
+
+.leftPanel::-webkit-scrollbar {
+  display: none;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mainContainer{
@@ -95,8 +113,8 @@ hr{
 .description-text{
   font-size: 16px;
   margin-bottom: 100px;
-  text-align: justify;
   margin: 0 25px;
+  text-align: center;
 }
 
 .buttons-description {
@@ -117,6 +135,10 @@ hr{
   display: flex;
   gap: 30px;
   margin: 25px auto;
+}
+
+.buttonsSocialMedia a:hover{
+  color: aqua;
 }
 
 .buttonsResponsive{
@@ -167,13 +189,34 @@ hr{
   color: #FFF;
 }
 
-.contact i, .buttonContact i{
+.contact i, .buttonContact i, .btnGoBack{
   font-size: 25px;
   color: #000000;
 }
 
 .social-media{
   color: #000000;
+}
+
+.btnGoBack{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 100rem;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.btnGoBack:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgb(160, 160, 160);;
 }
 
 /* PROJECTS COMPONENTS ---------------------------------------------------------------------------------------------- */
@@ -185,16 +228,36 @@ hr{
   margin-top: 20px;
 }
 
+.projectList{
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow-x: auto;
+  /* height: 55px; */
+  padding-top: 2px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  
+  /* box-shadow: -5px 0px #1817175e inset; */
+}
+
+.projectList::-webkit-scrollbar {
+  display: none;
+}
+
 .navbar{
   display: flex;
   list-style: none;
   align-items: center;
   gap: 15px;
-  margin-bottom: 25px;
+  width: auto;
+  height: 35px;
+  padding-bottom: 22px;
 }
 
 .navbar li {
   display: inline-block;
+  
 }
 
 .navbar li label{
@@ -217,16 +280,16 @@ hr{
 
 .navbar li label:hover{
   cursor: pointer;
-  color: #000000;
+  /* color: #000000;
   background-color: #FFF;
-  border-color: #fff;
+  border-color: #fff; */
 }
 
-.navbar li label:hover i{
+/* .navbar li label:hover i{
   cursor: pointer;
   color: #000000;
   background-color: #FFF;
-}
+} */
 
 .navbar li input[type="checkbox"]:checked + label {
   color: #000000;
@@ -307,6 +370,7 @@ hr{
 
 .form-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -406,9 +470,22 @@ hr{
   box-shadow: 0px 6px 8px rgba(5, 37, 85, 0.5);
 }
 
+.sendMessage:hover{
+  cursor: pointer;
+  box-shadow: 0px 6px 8px rgba(106, 54, 226, 0.726);
+}
+
 .sendMessage i{
   color: #FFF;
 
+}
+
+/* UI Phone ---------------------------------------------------- */
+
+.projectsPhone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* RESPONSIVE ---------------------------------------------------------------------------------------------- */
@@ -416,6 +493,10 @@ hr{
 
 @media (min-width: 901px) {
   .buttonsResponsive{
+    display: none;
+  }
+
+  .leftPanel{
     display: none;
   }
 }
@@ -426,12 +507,20 @@ hr{
     justify-content: center;
   }
 
+  .leftPanelMain{
+    display: none;
+  }
+
+  .leftPanel{
+    min-width: 360px;
+  }
+
   .mainContainer{
     display: none;
     width: 0;
   }
 
-  .description{
+  .leftPanel{
     border-radius: 30px;
     align-items: center;
     width: auto;
@@ -441,4 +530,63 @@ hr{
   .buttons-description{
     gap: 40px;
   }
+
+  /* CARDS FOR PHONE */
+
+  .navbar{
+    width: 350px;
+  }
+
+  .project-cards{
+    justify-content: center;
+  }
+
+  .project-card{
+    width: 350px;
+  }
+  
+  .imageProject{
+    height: 125px;
+  }
+  
+  .project-card h2{
+    font-size: 23px;
+    margin-bottom: 8px;
+  }
+  
+  .project-card p{
+    text-align: left;
+    font-size: 15px;
+  }
+
+  /* Form Contact*/
+
+  .form-contact {
+    margin-top: 60px;
+  }
+
+  .form-contact input{
+    width: 300px;
+  }
+  
+  .form-contact textarea{
+    width: 300px;
+  }
+
+  .sendMessage {
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .project-card{
+    width: 300px;
+  }
+
+  .imageProject{
+    display: none;
+  }
+  
 }

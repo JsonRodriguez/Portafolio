@@ -4,7 +4,7 @@ export const Projects = () => {
   return (
     <div className="project-container">
       <NavBar />
-      <Cards />
+      <Cards maxCaractere={200} />
     </div>
   )
 }
