@@ -7,7 +7,7 @@ export const Description = () => {
         <>
             <div className="description">
                 <img className="perfil-photo" src={imageProfile} alt="Image Profile" />
-                <h1 className="name">Json Rodríguez</h1>
+                <h1 className="name">Jeison Quintero Rodríguez</h1>
                 <p className="profession">FrontEnd Developer</p>
                 <hr />
                 <h3 className="about-me">About me</h3>
