@@ -1,5 +1,5 @@
-import imageP1 from "../images/imageP1.png";
-import imageP2 from "../images/imageP2.png";
+import imageP1 from "../images/HeroesAppBanner.png";
+import imageP2 from "../images/JournalAppBanner.png";
 import imageP3 from "../images/imageP3.png";
 import imageP4 from "../images/imageP4.jpg";
 
@@ -19,29 +19,34 @@ export const Cards = ({ maxCaractere }) => {
       }
     }
     calculateMaxLength(text);
+
+    // const onClickCard = (link) => {
+    //   console.log(link)
+    // }
+
     return (
         <div className="project-cards">
-            <div className="project-card">
-              <img className="imageProject" src={ imageP1 } alt="Projet 1" />
+            <a href='https://github.com/JsonRodriguez/Heroes-App' target="_blank" className="project-card zoomHover scaleHoverCard">
+              <img className="imageProject" src={ imageP1 } alt="HeroesApp" />
               <div className="projectHeader">
                 <div className="titleProject">
-                  <h2>Project 1</h2>   
+                  <h2>Marvel and DC Heroes</h2>   
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </div>
-                <p>{ calculateMaxLength(text) }</p>
+                <p>{ calculateMaxLength("It is an app where we have different features and styles to enjoy Marvel and DC Heroes") }</p>
               </div>
-            </div>
-            <div className="project-card">
-              <img className="imageProject" src={ imageP2 } alt="Projet 2" />
+            </a>
+            <a href='https://github.com/JsonRodriguez/JournalApp' target="_blank"  className="project-card zoomHover scaleHoverCard">
+              <img className="imageProject" src={ imageP2 } alt="JournalApp" />
               <div className="projectHeader">
                 <div className="titleProject">
-                  <h2>Project 2</h2>   
+                  <h2>Journal Application</h2>   
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </div>
-                <p>{ calculateMaxLength(text) }</p>
+                <p>{ calculateMaxLength("Application to save annotations with image attachments") }</p>
               </div>
-            </div>
-            {/* <div className="project-card">
+            </a>
+            <div className="project-card zoomHover scaleHoverCard">
               <img className="imageProject" src={ imageP3 } alt="Projet 3" />
               <div className="projectHeader">
                 <div className="titleProject">
@@ -51,7 +56,7 @@ export const Cards = ({ maxCaractere }) => {
                 <p>{ calculateMaxLength(text) }</p>
               </div>
             </div>
-            <div className="project-card">
+            <div className="project-card zoomHover scaleHoverCard">
               <img className="imageProject" src={ imageP4 } alt="Projet 4" />
               <div className="projectHeader">
                 <div className="titleProject">
@@ -60,7 +65,7 @@ export const Cards = ({ maxCaractere }) => {
                 </div>
                 <p>{ calculateMaxLength(text) }</p>
               </div>
-            </div> */}
+            </div>
             
           </div>
     )

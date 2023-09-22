@@ -22,7 +22,7 @@ export const RightPanel = () => {
         <div className="mainContainer">
           <header className="header">
             <h1>{title} <i className={titleIcon}></i></h1>
-            <button onClick={ onChangeContainer } className="contact">{button} <i className={buttonIcon}></i></button>
+            <button onClick={ onChangeContainer } className="contact zoomHover scaleHoverCard">{button} <i className={buttonIcon}></i></button>
           </header>
           {
             container === 'projects' ? <Projects /> : <Contact />

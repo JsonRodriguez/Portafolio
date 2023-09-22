@@ -11,7 +11,7 @@ export const Description = () => {
                 <p className="profession">FrontEnd Developer</p>
                 <hr />
                 <h3 className="about-me">About me</h3>
-                <p className="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et illo dicta, debitis amet libero saepe cumque facere expedita vero maiores excepturi dolorem magnam vitae quibusdam totam nostrum quae adipisci autem!</p>
+                <p className="description-text">👨‍💻 I'm a passionate and creative frontend programmer with experience in UI design. 💡 I'm constantly learning and adapting to the latest technological trends. If you're looking for a dedicated professional in constant growth for your company, I'm ready to help you achieve your goals. 🚀😊.</p>
             </div>
             <div className="buttons-description">
                 <SocialMedia />

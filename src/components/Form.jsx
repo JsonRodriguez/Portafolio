@@ -17,7 +17,7 @@ export const Form = () => {
                 <label htmlFor="">Message</label>
                 <i className="fa-regular fa-paper-plane-top"></i>
                 <textarea placeholder="body message" name="" id="" cols="30" rows="10"></textarea>
-                <button className="sendMessage"> Send Message</button>
+                <button className="sendMessage zoomHover scaleHoverCard"> Send Message</button>
             </form>
         </div>
     )
