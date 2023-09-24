@@ -543,6 +543,12 @@ hr{
   transform: scale(1.02);
 }
 
+.validForm{
+  color: #ff6d6d;
+  margin-top: -15px;
+  font-size: 15px;
+}
+
 /* UI Phone ---------------------------------------------------- */
 
 .projectsPhone {

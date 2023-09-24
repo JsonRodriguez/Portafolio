@@ -1,22 +1,71 @@
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { useForm } from '../hooks/useForm';
+
+const formData = {
+    user_name: '',
+    user_email: '',
+    message: '',
+}
+
+const formValidations = {
+    user_name: [ (value) => value.length >= 2 , 'The name must contain at least 2 characters.'],
+    user_email: [ (value) => value.includes('@'), 'Please enter your email address.'],
+    message: [ (value) => value.length >= 1 , 'Please do not forget to write your message.'],
+}
 
 export const Form = () => {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const { 
+        user_name, user_email, message, onInputChange,
+        isFormValid, user_nameValid, user_emailValid, messageValid, onResetForm
+    } = useForm(formData, formValidations);
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setFormSubmitted(true);
+        if( !isFormValid ) return;
+
+        emailjs.sendForm('service_suzsxa9', 'template_jyxxtpe', form.current, 'I9ICdanr77vrYHner')
+            .then((result) => {
+                onResetForm();
+                setFormSubmitted(false)
+                // console.log(result.text);
+                // console.log('Message Sent');
+            }, (error) => {
+                console.log(error.text);
+        });
+        
+    }
+
     return (
         <div className="form-container">
             <h1 className="LeftPanelContactTitle" >Let's Talk</h1>
-            <form className="form-contact">
-                <label htmlFor="">Name</label>
+            <form className="form-contact" ref={form} onSubmit={ sendEmail }>
+                <label>Name</label>
+                {
+                    !!user_nameValid && formSubmitted ? <p className='validForm'>{user_nameValid}</p> : ''
+                }
                 <div className="input-icon">
                     <i className="fa-regular fa-user"></i>
-                    <input type="text" placeholder="Kriss Kyle" />
+                    <input value={ user_name } onChange={ onInputChange } type="text" placeholder="Kriss Kyle" name="user_name" />
                 </div>
-                <label htmlFor="">Email</label>
+                <label>Email</label>
+                {
+                    !!user_emailValid && formSubmitted ? <p className='validForm'>{user_emailValid}</p> : ''
+                }
                 <div className="input-icon">
                     <i className="fa-regular fa-envelope"></i>
-                    <input type="text" placeholder="example@gmail.com" />
+                    <input value={ user_email } onChange={ onInputChange } type="text" placeholder="example@gmail.com" name="user_email" />
                 </div>
-                <label htmlFor="">Message</label>
+                <label>Message</label>
+                {
+                    !!messageValid && formSubmitted ? <p className='validForm'>{messageValid}</p> : ''
+                }
                 <i className="fa-regular fa-paper-plane-top"></i>
-                <textarea placeholder="body message" name="" id="" cols="30" rows="10"></textarea>
+                <textarea value={ message } onChange={ onInputChange } placeholder="body message" name="message" cols="30" rows="10"></textarea>
                 <button className="sendMessage zoomHover scaleHoverCard"> Send Message</button>
             </form>
         </div>
