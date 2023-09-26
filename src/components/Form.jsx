@@ -32,8 +32,6 @@ export const Form = () => {
             .then((result) => {
                 onResetForm();
                 setFormSubmitted(false)
-                // console.log(result.text);
-                // console.log('Message Sent');
             }, (error) => {
                 console.log(error.text);
         });
