@@ -3,6 +3,7 @@ import imageP2 from "../images/JournalAppBanner.png";
 import imageP3 from "../images/WeatherAppBanner.png";
 import imageP4 from "../images/MusicPlayerAppBanner.png";
 import imageP5 from "../images/landingPageBanner.png";
+import imageP6 from "../images/InstagramCopyBanner.png";
 
 export const projectsData = [
     {
@@ -39,5 +40,12 @@ export const projectsData = [
         'url': 'https://github.com/JsonRodriguez/AcademyLandingPage',
         'title': 'Academy Landing Page',
         'description': 'It is a web application dedicated to providing information about the different courses that the academy contains.'
+    },
+    {
+        'id': '6',
+        'image': imageP6,
+        'url': 'https://github.com/JsonRodriguez/instagram-copy',
+        'title': 'Instagram Copy',
+        'description': 'It is a copy project of the initial interface of the Instagram website.'
     },
 ]
