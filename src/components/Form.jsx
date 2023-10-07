@@ -15,7 +15,7 @@ const formValidations = {
 }
 
 export const Form = () => {
-    const [formSubmitted, setFormSubmitted] = useState(true);
+    const [formSubmitted, setFormSubmitted] = useState(false);
     const { 
         user_name, user_email, message, onInputChange,
         isFormValid, user_nameValid, user_emailValid, messageValid, onResetForm, 
@@ -45,7 +45,7 @@ export const Form = () => {
             <form className="form-contact" ref={form} onSubmit={ sendEmail }>
                 <label>Name</label>
                 {
-                    !!user_nameValid && userOnChange ? <p className='validForm'>{user_nameValid}</p> : ''
+                    !!user_nameValid && (userOnChange || formSubmitted) ? <p className='validForm'>{user_nameValid}</p> : ''
                 }
                 <div className="input-icon">
                     <i className="fa-regular fa-user"></i>
@@ -53,7 +53,7 @@ export const Form = () => {
                 </div>
                 <label>Email</label>
                 {
-                    !!user_emailValid && emailOnChange ? <p className='validForm'>{user_emailValid}</p> : ''
+                    !!user_emailValid && (emailOnChange || formSubmitted) ? <p className='validForm'>{user_emailValid}</p> : ''
                 }
                 <div className="input-icon">
                     <i className="fa-regular fa-envelope"></i>
@@ -61,7 +61,7 @@ export const Form = () => {
                 </div>
                 <label>Message</label>
                 {
-                    !!messageValid && bodyOnChange ? <p className='validForm'>{messageValid}</p> : ''
+                    !!messageValid && (bodyOnChange || formSubmitted) ? <p className='validForm'>{messageValid}</p> : ''
                 }
                 <i className="fa-regular fa-paper-plane-top"></i>
                 <textarea value={ message } onChange={ onInputChange } placeholder="body message" name="message" cols="30" rows="10"></textarea>
