@@ -5,6 +5,10 @@ export const useForm = ( initialForm = {}, formValidations = {} ) => {
     const [ formState, setFormState ] = useState( initialForm );
     const [ formValidation, setFormValidation ] = useState({});
 
+    const [userOnChange, setUserOnChange] = useState(false);
+    const [emailOnChange, setEmailOnChange] = useState(false);
+    const [bodyOnChange, setBodyOnChange] = useState(false);
+
     useEffect(() => {
         createValidators();
     }, [formState]);
@@ -25,6 +29,11 @@ export const useForm = ( initialForm = {}, formValidations = {} ) => {
 
     const onInputChange = ({ target }) => {
         const { name, value } = target;
+
+        if(name === 'user_name') setUserOnChange(true);
+        if(name === 'user_email') setEmailOnChange(true);
+        if(name === 'message') setBodyOnChange(true);
+
         setFormState({
             ...formState,
             [ name ]: value
@@ -54,5 +63,8 @@ export const useForm = ( initialForm = {}, formValidations = {} ) => {
 
         ...formValidation,
         isFormValid,
+        userOnChange,
+        emailOnChange,
+        bodyOnChange
     }
 }

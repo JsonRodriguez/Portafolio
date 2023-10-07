@@ -72,7 +72,7 @@ main div::-webkit-scrollbar{
   border: 0.1rem solid rgba(136, 144, 255, 0.6);
   padding: 20px;
   min-height: 800px;
-  min-width: 550px;
+  min-width: 430px;
   border-left: none;
 
   overflow: auto;
@@ -83,8 +83,6 @@ main div::-webkit-scrollbar{
   backdrop-filter: blur(7.5px);
 
   border-radius: 0 30px 30px 0;
-
-  transition: all 2s ease;
 }
 
 .mainContainer::-webkit-scrollbar{
@@ -534,7 +532,7 @@ hr{
 /* RESPONSIVE ---------------------------------------------------------------------------------------------- */
 /* min 900px width responsive */
 
-@media (min-width: 901px) {
+@media (min-width: 801px) {
   .buttonsResponsive{
     display: none;
   }
@@ -544,7 +542,7 @@ hr{
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .container{
     grid-template-columns: auto;
     justify-content: center;
@@ -633,7 +631,7 @@ hr{
   }
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
 
   .leftPanel{
     width: 350px;
@@ -644,4 +642,4 @@ hr{
     margin-left: 260px;
   }
   
-}
+} */
