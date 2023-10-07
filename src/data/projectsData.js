@@ -1,9 +1,9 @@
-import imageP1 from "../images/HeroesAppBanner.png";
-import imageP2 from "../images/JournalAppBanner.png";
-import imageP3 from "../images/WeatherAppBanner.png";
-import imageP4 from "../images/MusicPlayerAppBanner.png";
-import imageP5 from "../images/landingPageBanner.png";
-import imageP6 from "../images/InstagramCopyBanner.png";
+import imageP1 from "../images/HeroesAppBanner.webp";
+import imageP2 from "../images/JournalAppBanner.webp";
+import imageP3 from "../images/WeatherAppBanner.webp";
+import imageP4 from "../images/MusicPlayerAppBanner.webp";
+import imageP5 from "../images/landingPageBanner.webp";
+import imageP6 from "../images/InstagramCopyBanner.webp";
 
 export const projectsData = [
     {
