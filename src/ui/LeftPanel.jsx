@@ -1,8 +1,7 @@
 
-import { ProjectsPhone } from "./ProjectsPhone";
-import { Description } from "./Description";
-import { LeftPanelContact } from "./LeftPanelContact";
+import { ProjectsPhone, Description, LeftPanelContact } from "./";
 import { useLeftPanel } from "../hooks";
+import { SocialMedia } from "../components";
 
 
 export const LeftPanel = () => {
@@ -45,12 +44,15 @@ export const LeftPanel = () => {
                     return (
                         <>
                             <LeftPanelContact />
-                            <button 
-                                className="btnGoBack zoomHover scaleHoverCard"
-                                onClick={onDescription}
-                            >
-                                Description
-                            </button>
+                            <div className="buttons-description">
+                                <SocialMedia />
+                            </div>
+                            <div className="buttons-description">
+                                <div className="buttonsResponsive">
+                                    <button onClick={onProjects}  className="buttonProjects zoomHover scaleHoverCard">Projects <i className="fa-solid fa-code"></i></button>
+                                    <button onClick={onDescription} className="buttonContact zoomHover scaleHoverCard">Description {<i className="fa-regular fa-circle-user"></i>}</button>
+                                </div>
+                            </div>
                         </>)
                 }
             })()}

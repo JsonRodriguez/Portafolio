@@ -64,7 +64,7 @@ export const Form = () => {
                 }
                 <i className="fa-regular fa-paper-plane-top"></i>
                 <textarea value={ message } onChange={ onInputChange } placeholder="body message" name="message" cols="30" rows="10"></textarea>
-                <button className="sendMessage zoomHover scaleHoverCard"> Send Message</button>
+                <button className="sendMessage zoomHover scaleHoverCard"><i className="fa-regular fa-paper-plane"></i> Send Message</button>
             </form>
         </div>
     )

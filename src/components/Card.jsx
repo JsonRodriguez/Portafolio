@@ -15,14 +15,12 @@ export const Card = ({ image, url, title, description, maxCaractere = 125 }) => 
 
     return (
         <a href={ url } target="_blank"  className="project-card zoomHover scaleHoverCard">
-            <img className="imageProject" src={ image } alt={ title } />
-            <div className="projectHeader">
-                <div className="titleProject">
-                <h2>{ title }</h2>   
+            <div className="cardImage">
+                <img className="imageProject" src={ image } alt={ title } />
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-                <p>{ calculateMaxLength( description ) }</p>
             </div>
+            <h2>{ title }</h2>
+            <p>{ calculateMaxLength( description ) }</p>
         </a>
     )
 }

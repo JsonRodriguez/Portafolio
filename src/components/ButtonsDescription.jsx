@@ -3,17 +3,6 @@ import { SocialMedia } from "./SocialMedia";
 
 export const ButtonsDescription = () => {
 
-    // const 
-    // { 
-    //     container, 
-
-    //     title, 
-    //     button,
-    //     titleIcon,
-    //     buttonIcon,
-    //     onChangeContainer
-    // }  = useContainer();
-
     const { setLeftPanel } = useLeftPanel();
 
     const onProjects = () => {
