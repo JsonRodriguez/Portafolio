@@ -41,7 +41,7 @@ export const Form = () => {
 
     return (
         <div className="form-container">
-            <h1 className="LeftPanelContactTitle" >Let's Talk</h1>
+            
             <form className="form-contact" ref={form} onSubmit={ sendEmail }>
                 <label>Name</label>
                 {

@@ -10,8 +10,11 @@ export const LeftPanelContact = () => {
     }
 
     return (
-        <div className="LeftPanel-contact-container">
-            <Form />
-        </div>
+        <>
+            <h1 className="LeftPanelContactTitle" >Let's Talk</h1>
+            <div className="LeftPanel-contact-container">
+                <Form />
+            </div>
+        </>
     )
 }
