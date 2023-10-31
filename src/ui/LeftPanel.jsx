@@ -20,11 +20,9 @@ export const LeftPanel = () => {
                     return ( 
                         <>
                             <Description />
-                            <div className="buttons-description">
-                                <div className="buttonsResponsive">
-                                    <button onClick={onProjects} className="buttonProjects zoomHover scaleHoverCard">Projects {<i className="fa-solid fa-code"></i>}</button>
-                                    <button onClick={onTalk}  className="buttonContact zoomHover scaleHoverCard">Let's Talk <i className="fa-regular fa-envelope"></i></button>
-                                </div>
+                            <div className="buttonsResponsive">
+                                <button onClick={onProjects} className="buttonProjects zoomHover scaleHoverCard">Projects {<i className="fa-solid fa-code"></i>}</button>
+                                <button onClick={onTalk}  className="buttonContact zoomHover scaleHoverCard">Let's Talk <i className="fa-regular fa-envelope"></i></button>
                             </div>
                         </>
                     )
@@ -32,11 +30,9 @@ export const LeftPanel = () => {
                     return (
                         <>
                             <ProjectsPhone />
-                            <div className="buttons-description">
-                                <div className="buttonsResponsive">
-                                    <button onClick={onDescription} className="buttonProjects zoomHover scaleHoverCard">Description {<i className="fa-regular fa-circle-user"></i>}</button>
-                                    <button onClick={onTalk}  className="buttonContact zoomHover scaleHoverCard">Let's Talk <i className="fa-regular fa-envelope"></i></button>
-                                </div>
+                            <div className="buttonsResponsive">
+                                <button onClick={onDescription} className="buttonProjects zoomHover scaleHoverCard">Description {<i className="fa-regular fa-circle-user"></i>}</button>
+                                <button onClick={onTalk}  className="buttonContact zoomHover scaleHoverCard">Let's Talk <i className="fa-regular fa-envelope"></i></button>
                             </div>
                         </>
                     )
@@ -47,11 +43,9 @@ export const LeftPanel = () => {
                             <div className="buttons-description">
                                 <SocialMedia />
                             </div>
-                            <div className="buttons-description">
-                                <div className="buttonsResponsive">
-                                    <button onClick={onProjects}  className="buttonProjects zoomHover scaleHoverCard">Projects <i className="fa-solid fa-code"></i></button>
-                                    <button onClick={onDescription} className="buttonContact zoomHover scaleHoverCard">Description {<i className="fa-regular fa-circle-user"></i>}</button>
-                                </div>
+                            <div className="buttonsResponsive">
+                                <button onClick={onProjects}  className="buttonProjects zoomHover scaleHoverCard">Projects <i className="fa-solid fa-code"></i></button>
+                                <button onClick={onDescription} className="buttonContact zoomHover scaleHoverCard">Description {<i className="fa-regular fa-circle-user"></i>}</button>
                             </div>
                         </>)
                 }

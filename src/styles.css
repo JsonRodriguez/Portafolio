@@ -1,5 +1,5 @@
-*{
-  color: #FFFFFF;
+* {
+  color: #ffffff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
   padding: 0;
   margin: 0;
   height: 100vh;
@@ -23,70 +24,67 @@ body {
   color: #fff;
 }
 
-body div::-webkit-scrollbar{
+body div::-webkit-scrollbar {
   display: none;
 }
 
 /* CONTAINERS ------------------------------------------------------------------------------------ */
 
-.container{
+.container {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  margin: 20px 50px 20px 50px;
-  height: 80%;
-  max-height: 800px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  inset: 5rem;
+  justify-content: center;
 }
 
-.leftPanel, .leftPanelMain{
+.leftPanel,
+.leftPanelMain {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  min-width: 370px;
   max-width: 500px;
-  min-height: 800px;
   padding: 20px;
   border: 0.1rem solid rgba(136, 144, 255, 0.6);
 
-  background: linear-gradient( rgba(102, 88, 255, 0.1), 
-      rgba(102, 88, 255, 0.01));
+  background: linear-gradient(
+    rgba(102, 88, 255, 0.1),
+    rgba(102, 88, 255, 0.01)
+  );
   backdrop-filter: blur(16px);
 
   border-radius: 30px 0px 0px 30px;
 }
 
-.leftPanel{
-  min-width: 370px;
-}
-
-.leftPanel h1{
+.leftPanel h1 {
   margin-bottom: 10px;
 }
 
-.descriptionScroll{
+.descriptionScroll {
   overflow-y: scroll;
-  -webkit-mask-image: linear-gradient(180deg,#000 90%,transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent);
 }
 
-.description{
+.description {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
 }
 
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   border: 0.1rem solid rgba(136, 144, 255, 0.6);
   padding: 20px;
-  min-height: 800px;
-  min-width: 430px;
   border-left: none;
 
-  background: linear-gradient( rgba(102, 88, 255, 0.1), 
-      rgba(102, 88, 255, 0.01));
+  background: linear-gradient(
+    rgba(102, 88, 255, 0.1),
+    rgba(102, 88, 255, 0.01)
+  );
   backdrop-filter: blur(7.5px);
 
   border-radius: 0 30px 30px 0;
@@ -94,36 +92,36 @@ body div::-webkit-scrollbar{
 
 /* DESCRIPTION COMPONENTS ------------------------------------------------------------------------------------- */
 
-.perfil-photo{
+.perfil-photo {
   width: 180px;
   clip-path: circle(42% at 50% 40%);
 }
 
-.name{
+.name {
   font-size: 33px;
   margin-bottom: 10px;
   text-align: center;
   font-weight: bold;
 }
 
-.profession{
+.profession {
   font-size: 18px;
   margin-bottom: 30px;
 }
 
-hr{
+hr {
   border: 1px solid rgba(255, 255, 255, 0.6);
-  width: 70%; 
+  width: 70%;
 }
 
-.about-me{
+.about-me {
   font-size: 25px;
   margin-top: 30px;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.description-text{
+.description-text {
   font-size: 16px;
   margin-bottom: 100px;
   margin: 0 25px;
@@ -133,29 +131,26 @@ hr{
 .buttons-description {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  margin-top: 15px;
-  /* padding-bottom: 20px; */
 }
 
-.buttons-description i{
+.buttons-description i {
   font-size: 45px;
 }
 
-.buttonsSocialMedia{
+.buttonsSocialMedia {
   display: flex;
   gap: 30px;
   margin: 25px auto;
 }
 
-.buttonsSocialMedia a:hover{
+.buttonsSocialMedia a:hover {
   color: aqua;
 }
 
-.buttonsResponsive{
+.buttonsResponsive {
   display: flex;
   justify-items: center;
   justify-content: space-between;
@@ -163,7 +158,8 @@ hr{
   margin-bottom: 10px;
 }
 
-.contact, .buttonContact{
+.contact,
+.buttonContact {
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -176,10 +172,10 @@ hr{
   border: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.buttonProjects{
+.buttonProjects {
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -190,30 +186,42 @@ hr{
   font-weight: bold;
   border-radius: 100rem;
   border: 1px solid rgba(136, 144, 255, 0.6);
-  color: #FFF;
-  background: linear-gradient(172.91deg, rgba(61, 127, 224, 0.726) 0%, rgba(148, 98, 241, 0.6) 0.01%, rgba(111, 97, 238, 0.559) 0.02%, rgba(175, 116, 243, 0.42) 0.03%, rgba(215, 124, 233, 0.18) 98.48%, rgba(236, 165, 227, 0.18) 98.48%);
+  color: #fff;
+  background: linear-gradient(
+    172.91deg,
+    rgba(61, 127, 224, 0.726) 0%,
+    rgba(148, 98, 241, 0.6) 0.01%,
+    rgba(111, 97, 238, 0.559) 0.02%,
+    rgba(175, 116, 243, 0.42) 0.03%,
+    rgba(215, 124, 233, 0.18) 98.48%,
+    rgba(236, 165, 227, 0.18) 98.48%
+  );
   box-shadow: 0px 6px 8px rgba(5, 37, 85, 0.5);
 }
 
-.contact:hover, .buttonContact:hover, .buttonProjects:hover{
+.contact:hover,
+.buttonContact:hover,
+.buttonProjects:hover {
   cursor: pointer;
 }
 
-.buttonProjects i{
+.buttonProjects i {
   font-size: 25px;
-  color: #FFF;
+  color: #fff;
 }
 
-.contact i, .buttonContact i, .btnGoBack{
+.contact i,
+.buttonContact i,
+.btnGoBack {
   font-size: 25px;
   color: #000000;
 }
 
-.social-media{
+.social-media {
   color: #000000;
 }
 
-.btnGoBack{
+.btnGoBack {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,25 +234,25 @@ hr{
   border: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.btnGoBack:hover{
+.btnGoBack:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 10px rgb(160, 160, 160);;
+  box-shadow: 5px 5px 10px rgb(160, 160, 160);
 }
 
 /* PROJECTS COMPONENTS ---------------------------------------------------------------------------------------------- */
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
   margin-top: 20px;
 }
 
-.projectList{
-  -ms-overflow-style: none; 
+.projectList {
+  -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-x: auto;
   padding-top: 2px;
@@ -257,7 +265,7 @@ hr{
   display: none;
 }
 
-.navbar{
+.navbar {
   display: flex;
   list-style: none;
   align-items: center;
@@ -269,10 +277,9 @@ hr{
 
 .navbar li {
   display: inline-block;
-  
 }
 
-.navbar li label{
+.navbar li label {
   display: flex;
   justify-content: center;
   font-size: 16px;
@@ -284,38 +291,39 @@ hr{
   color: #000000;
   background: none;
   border: solid;
-  border-color:  rgba(136, 144, 255, 0.6);
+  border-color: rgba(136, 144, 255, 0.6);
   border-radius: 100rem;
-  color: #FFF;
+  color: #fff;
   gap: 8px;
 }
 
-.navbar li label:hover{
+.navbar li label:hover {
   cursor: pointer;
 }
 
 .navbar li input[type="checkbox"]:checked + label {
   color: #000000;
-  background-color: #FFF;
+  background-color: #fff;
   border-color: #fff;
 }
 
-.navbar li input[type="checkbox"]:checked + label i{
+.navbar li input[type="checkbox"]:checked + label i {
   color: #000000;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .navbar li input[type="checkbox"] {
   opacity: 0;
 }
 
-.project-container, .projectsPhone{
+.project-container,
+.projectsPhone {
   overflow-y: scroll;
   width: 100%;
-  -webkit-mask-image: linear-gradient(180deg,#000 90%,transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent);
 }
 
-.project-cards{
+.project-cards {
   display: flex;
   position: relative;
   flex-wrap: wrap;
@@ -328,65 +336,130 @@ hr{
   background: transparent;
 }
 
-.project-card{
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 0) );
+.project-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgb(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0.001),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 35px;
   padding: 15px;
   text-decoration: none;
   width: 345px;
   height: auto;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   gap: 15px;
 }
 
-.cardImage{
+.cardImage {
   display: flex;
   width: 100%;
   height: 175px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255,255,255,0.1));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
   border-radius: 20px;
   padding: 2px;
 }
 
-.imageProject{
+.imageProject {
   border-radius: 20px;
   object-fit: cover;
   width: 100%;
   height: 173px;
 }
 
-.project-card h2{
+.project-card h2 {
   font-size: 25px;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.project-card p{
+.project-card p {
   margin-bottom: 10px;
   font-weight: 100;
 }
 
-.cardImage i{
+.cardImage i {
   position: absolute;
   font-size: 25px;
   margin-left: 275px;
   margin-top: 140px;
 }
 
-.project-card:hover{
+.project-card .hoverLinkCard {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.438);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.project-card .hoverLinkCard span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+.project-card .hoverLinkCard span:first-child {
+  top: 136px;
+  left: 65px;
+}
+
+.project-card .hoverLinkCard span:last-child {
+  top: 136px;
+  right: 65px;
+}
+
+.project-card .hoverLinkCard a {
+  font-size: 40px;
+  color: #fff;
+}
+
+.project-card .hoverLinkCard span:hover {
+  background: #cccccc69;
   cursor: pointer;
+}
+
+.project-card:hover .hoverLinkCard {
+  height: 100%;
 }
 
 /* CONTACT STYLE ------------------------------------------------------------------------------------------- */
 
-.LeftPanel-contact-container{
+.LeftPanel-contact-container {
   overflow-y: scroll;
-  -webkit-mask-image: linear-gradient(180deg,#000 90%,transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent);
   padding-bottom: 20px;
 }
 
-.contact-container .header{
+.contact-container {
+  overflow-y: scroll;
+  -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent);
+  padding-bottom: 20px;
+}
+
+.contact-container .header {
   align-items: center;
 }
 
@@ -397,7 +470,7 @@ hr{
   justify-content: center;
 }
 
-.form-contact{
+.form-contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -405,7 +478,7 @@ hr{
   overflow-y: scroll;
   overflow: hidden;
   width: auto;
-  color: #FFF;
+  color: #fff;
   gap: 15px;
 }
 
@@ -414,7 +487,7 @@ hr{
   text-align: left;
 }
 
-.form-contact input{
+.form-contact input {
   width: 410px;
   font-size: 20px;
   padding: 0 14px 5px 44px;
@@ -422,34 +495,35 @@ hr{
   height: 50px;
 }
 
-.form-contact textarea{
-  color: #FFF;
+.form-contact textarea {
+  color: #fff;
   width: 410px;
   font-size: 20px;
   padding: 5px 5px 5px 10px;
   resize: none;
 }
 
-.form-contact textarea::-webkit-scrollbar{
+.form-contact textarea::-webkit-scrollbar {
   width: 5px;
 }
 
 .form-contact textarea::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.form-contact textarea::-webkit-scrollbar-thumb{
+.form-contact textarea::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
 }
 
-.form-contact input::placeholder, textarea::placeholder{
+.form-contact input::placeholder,
+textarea::placeholder {
   color: rgba(255, 255, 255, 0.3);
-  
 }
 
-.form-contact input, .form-contact textarea{
+.form-contact input,
+.form-contact textarea {
   border: none;
   background: transparent;
   border: 0.1rem solid rgba(136, 144, 255, 0.6);
@@ -457,7 +531,7 @@ hr{
   border-radius: 8px;
 }
 
-.form-contact .input-icon i{
+.form-contact .input-icon i {
   position: absolute;
   width: auto;
   z-index: 1;
@@ -466,20 +540,21 @@ hr{
   padding-bottom: 2px;
 }
 
-.input-icon{
+.input-icon {
   display: flex;
   align-items: center;
 }
 
-.form-contact input:focus, .form-contact textarea:focus{
+.form-contact input:focus,
+.form-contact textarea:focus {
   outline: none;
 }
 
-.form-contact > button{
+.form-contact > button {
   align-self: center;
 }
 
-.sendMessage{
+.sendMessage {
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -493,45 +568,44 @@ hr{
   border: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.sendMessage:hover{
+.sendMessage:hover {
   cursor: pointer;
 }
 
-.sendMessage i{
+.sendMessage i {
   font-size: 25px;
   color: #000000;
 }
 
-.zoomHover{
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+.zoomHover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
 
-.zoomHover:hover{
+.zoomHover:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
-.scaleHover{
+.scaleHover {
   transition: all 0.5s ease;
 }
 
-.scaleHover:hover{
+.scaleHover:hover {
   transform: scale(1.15);
-  /* transition: 0.5s; */
 }
 
-.scaleHoverCard{
+.scaleHoverCard {
   transition: all 0.5s ease;
 }
 
-.scaleHoverCard:hover{
+.scaleHoverCard:hover {
   transform: scale(1.02);
 }
 
-.validForm{
+.validForm {
   color: #ff6d6d;
   margin-top: -15px;
   font-size: 15px;
@@ -539,86 +613,69 @@ hr{
 
 /* UI Phone ---------------------------------------------------- */
 
-
 /* RESPONSIVE ---------------------------------------------------------------------------------------------- */
 /* min 900px width responsive */
 
-@media (min-width: 801px) {
-  .buttonsResponsive{
+@media (min-width: 983px) {
+  .buttonsResponsive {
     display: none;
   }
 
-  .leftPanel{
+  .leftPanel {
     display: none;
   }
 }
 
-@media (max-width: 800px) {
-  .container{
+@media (max-width: 982px) {
+  .container {
     grid-template-columns: auto;
     justify-content: center;
     min-height: none;
+    inset: 0.5rem;
   }
 
-  .leftPanelMain{
+  .leftPanelMain {
     display: none;
   }
 
-  .leftPanel{
-    min-width: 350px;
-    height: auto;
+  .leftPanel {
+    inset: 0.5rem;
+    border-radius: 30px;
   }
 
-  .mainContainer{
+  .mainContainer {
     display: none;
     width: 0;
     min-height: none;
   }
 
-  .leftPanel{
-    border-radius: 30px;
-    align-items: center;
-    width: auto;
-    max-width: 400px;
-  }
-
-  .buttons-description{
+  .buttons-description {
     gap: 40px;
     bottom: 0;
   }
 
   /* CARDS FOR PHONE */
 
-  .navbar{
+  .navbar {
     width: 350px;
   }
 
-  .project-cards{
-    justify-content: center;
-  }
-
-  .project-card{
-    padding: 12px;
-    width: 320px;
-    height: auto;
-  }
-
-  .cardImage{
+  .cardImage {
     display: flex;
     flex-direction: column;
   }
 
-  .project-card i{
+  .project-card .card-image i {
     position: absolute;
     margin-left: 260px;
   }
-  
-  .project-card h2{
+
+  .project-card h2 {
     font-size: 23px;
     margin-bottom: 8px;
   }
-  
-  .project-card p{
+
+  .project-card p {
     text-align: left;
     font-size: 15px;
   }
@@ -629,11 +686,11 @@ hr{
     margin-top: 15px;
   }
 
-  .form-contact input{
+  .form-contact input {
     width: 300px;
   }
-  
-  .form-contact textarea{
+
+  .form-contact textarea {
     width: 300px;
   }
 
@@ -641,16 +698,3 @@ hr{
     width: 250px;
   }
 }
-
-/* @media (max-width: 450px) {
-
-  .leftPanel{
-    width: 350px;
-  }
-
-  .project-card i{
-    position: absolute;
-    margin-left: 260px;
-  }
-  
-} */
