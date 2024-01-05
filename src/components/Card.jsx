@@ -1,5 +1,7 @@
 
-export const Card = ({ image, urlGit, title, description, maxCaractere = 125 }) => {
+export const Card = ({ image, urlGit, urlPage, title, description, maxCaractere}) => {
+
+    console.log(image, urlGit, title, description, maxCaractere)
 
     const calculateMaxLength = ( text ) => {
         if( text.length > maxCaractere ){
@@ -28,11 +30,14 @@ export const Card = ({ image, urlGit, title, description, maxCaractere = 125 }) 
             <p>{ calculateMaxLength( description ) }</p>
             <div className="hoverLinkCard">
                 <span>
-                    <a href={ urlGit } target="_blank"><i className="fa-brands fa-github"></i></a>
+                    <a target="_blank" rel="noreferrer" href={ urlGit }><i className="fa-brands fa-github"></i></a>
                 </span>
-                <span>
-                    <a href=""><i className="fa-regular fa-window-restore"></i></a>
-                </span>
+                {
+                    (urlPage !== 'none') && 
+                    <span>
+                        <a target="_blank" rel="noreferrer" href={ urlPage }><i className="fa-regular fa-window-restore"></i></a>
+                    </span>
+                }
             </div>
         </div>
     )

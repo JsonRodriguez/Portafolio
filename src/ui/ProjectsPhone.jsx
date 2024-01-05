@@ -1,4 +1,4 @@
-import { ButtonsDescription, Cards, NavBar } from "../components"
+import { Cards } from "../components"
 
 export const ProjectsPhone = () => {
     return (

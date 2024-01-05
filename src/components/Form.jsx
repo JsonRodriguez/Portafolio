@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from '../hooks/useForm';
 
@@ -30,7 +30,7 @@ export const Form = () => {
         if( !isFormValid ) return;
 
         emailjs.sendForm('service_suzsxa9', 'template_jyxxtpe', form.current, 'I9ICdanr77vrYHner')
-            .then((result) => {
+            .then(() => {
                 onResetForm();
                 setFormSubmitted(false)
             }, (error) => {
