@@ -1,8 +1,6 @@
 
 export const Card = ({ image, urlGit, urlPage, title, description, maxCaractere}) => {
 
-    console.log(image, urlGit, title, description, maxCaractere)
-
     const calculateMaxLength = ( text ) => {
         if( text.length > maxCaractere ){
             for (let i = maxCaractere; i > 1; i--) {

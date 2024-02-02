@@ -4,6 +4,7 @@ import imageP3 from "../images/WeatherAppBanner.webp";
 import imageP4 from "../images/MusicPlayerAppBanner.webp";
 import imageP5 from "../images/landingPageBanner.webp";
 import imageP6 from "../images/InstagramCopyBanner.webp";
+import imageP7 from "../images/MusicWebSiteBanner.webp";
 
 export const projectsData = [
     {
@@ -53,5 +54,13 @@ export const projectsData = [
         'urlPage': 'https://json-instagramclone.netlify.app/',
         'title': 'Instagram Copy',
         'description': 'It is a copy project of the initial interface of the Instagram website.'
+    },
+    {
+        'id': '7',
+        'image': imageP7,
+        'urlGit': 'https://github.com/JsonRodriguez/MusicWebSite',
+        'urlPage': 'https://json-musicwebsite.netlify.app/',
+        'title': 'Music Player Landing Page',
+        'description': 'An elegant and responsive design for a music player landing page! Showcase your music application or service with style and professionalism. Get your visitors excited to explore more!'
     },
 ]

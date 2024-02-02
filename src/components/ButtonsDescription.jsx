@@ -6,12 +6,10 @@ export const ButtonsDescription = () => {
     const { setLeftPanel } = useLeftPanel();
 
     const onProjects = () => {
-        console.log("project");
         setLeftPanel('leftProjects');
     }
 
     const onTalk = () => {
-        console.log("talk");
         setLeftPanel('leftContact');
     }
 
